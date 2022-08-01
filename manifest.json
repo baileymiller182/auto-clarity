@@ -1,0 +1,33 @@
+{
+
+  "manifest_version": 2,
+  "name": "auto-clarity",
+  "version": "1.0",
+
+  "description": "Auto complete timesheets in clarity PPM",
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://clarityppm.*.com/*"],
+      "js": ["content_scripts/autofill.js"]
+    }
+  ],
+
+  "icons": {
+    "48": "icons/icon.ico"
+  },
+
+  "browser_action": {
+    "browser_style": true,
+    "default_popup": "popup/run_script.html",
+    "default_icon": {
+      "16": "icons/icon.ico",
+      "32": "icons/icon.ico"
+    }
+  }
+}
+
